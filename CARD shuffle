@@ -1,0 +1,37 @@
+//card shuffling and dealing program using structures 
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define CARDS 52
+#define FACES 13
+
+// card structure defnition
+struct card 
+{
+    const char*face;//define pointer face
+    const char*suit;//define pointer suit
+};
+typedef struct card Card; //new type name for struct Card
+
+//prototypes
+void filldeck(Card *const wDeck, const char *wFace[],const char *wSuit[]);
+void shuffle(Card *const wDeck);
+void Deal(const Card *const wDeck);
+
+
+
+
+
+
+
+//deal CARDS
+void deal(const Card *const wDeck)
+{
+    //loop through wDeck
+    for(size_t i=0;i<CARDS;++i)
+    {
+        printf("%5s of %-8s%s",wDeck[i].face,wDeck[i].suit,(i+1)%4?" ": "\n");
+    }
+}
+
+
