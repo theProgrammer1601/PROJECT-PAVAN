@@ -52,6 +52,7 @@ void shuffle(Card*const wDeck)
  
  //loop through wDeck randomly swapping cards
  for(size_t i=0;i<CARDS;i++)
+ {
  size_t j =rand()%CARDS;
  Card temp = wDeck[i];
  wDeck[i] = wDeck[j];
@@ -68,5 +69,7 @@ void deal(const Card *const wDeck)
         printf("%5s of %-8s%s",wDeck[i].face,wDeck[i].suit,(i+1)%4?" ": "\n");
     }
 }
+
+
 
 
